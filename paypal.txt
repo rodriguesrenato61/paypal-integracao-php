@@ -1,0 +1,17 @@
+Url página usuário
+http://localhost/paypal/pages/usuario.php
+
+Url página comprar
+http://localhost/paypal/pages/comprar.php
+
+Retorno do Paypal teste
+
+
+Testar webhook
+http://localhost/paypal/testes/webhook.php?nome=notification_14887.json
+
+Ler log webhook
+http://localhost/paypal/testes/log-webhook.php?log_id=1
+
+Doc API de orders
+https://developer.paypal.com/docs/api/orders/v2/#orders_create

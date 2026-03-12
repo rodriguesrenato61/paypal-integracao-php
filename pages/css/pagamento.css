@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wgh@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f242d;
+    padding: 25px;
+}
+
+.container .box {
+    width: 500px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.box .row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .column {
+    flex: 1 1 250px;
+}
+
+.column .title {
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.column .info {
+    margin-top: 10px;
+    /*border: 1px solid black;*/
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    height: 300px;
+    padding: 10px;
+}
+
+.column .info p {
+    line-height: 20px;
+}
+
+.column .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.flex .img-box {
+    margin: 25px 0 0;
+    width: 165px;
+    height: 50px;
+}
+
+.flex .img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.flex .input-box {
+    margin-top: 5px;
+}
+
+.box .btn {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.box .btn .btn-box {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    /*background: #8175d3;*/
+    background: #193d72;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+
+.box .btn .btn-box:hover {
+    background: #6a5acd;
+    cursor: pointer;
+}
+
