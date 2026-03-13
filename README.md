@@ -26,7 +26,7 @@ PHP versão 8.3.26
 #### 2. Abra o terminal na pasta do repositório e digite o comando para instalar as dependências necessárias. Necessário ter o composer instalado.
 <pre>composer dump-autoload -o</pre>
 
-#### 3. Crie o banco de dados MySQL com os scripts no arquivo banco.sql.
+#### 3. Crie o banco de dados MySQL com os scripts no arquivo banco.sql, não é obrigatório a criação das chaves estrangeiras situadas nos scripts, neste caso é opcional.
 
 #### 4. Coloque as suas credenciais de autenticação CLIENT_ID e CLIENT_SECRET da API do Paypal no arquivo config.php e também a url raíz da sua aplicação em BASE_URL, juntamente com as outras variáveis de ambiente de acordo com as descrições.
 <pre>
@@ -56,6 +56,8 @@ const PAYPAL_CERTIFICADO = "C://laragon/www/paypal/resources/certificado/paypal_
 
 ![comprar](https://github.com/rodriguesrenato61/paypal-integracao-php/blob/main/prints/comprar.png)
 
+![paypal_checkout_etapa_1](https://github.com/rodriguesrenato61/paypal-integracao-php/blob/main/prints/paypal_checkout_etapa_1.png)
+
 #### 7. Após o processamento e aprovação do pagamento você será redirecionado para página de informações do pagamento realizado.
 
 ![pagamento](https://github.com/rodriguesrenato61/paypal-integracao-php/blob/main/prints/pagamento.png)
@@ -71,7 +73,7 @@ const PAYPAL_CERTIFICADO = "C://laragon/www/paypal/resources/certificado/paypal_
 ![teste_webhook_ipn](https://github.com/rodriguesrenato61/paypal-integracao-php/blob/main/prints/teste_webhook_ipn.png)
 
 #### 2. Leitura de Log
-Estando com o diretório de logs do webhook configurado na variável de ambiente LOGS_WEBHOOK_DIR, podemos visualizar os detalhes da execução das chamadas ao webhook. Para isso é necessário acessar o script testes/log-webhook.php, passando o id do log na url como query parâmetro log_id, exemplo: http://localhost/paypal/testes/log-webhook.php?log_id=18
+Estando com o diretório de logs do webhook configurado na variável de ambiente LOGS_WEBHOOK_DIR, podemos visualizar os detalhes da execução das chamadas ao webhook. Para isso é necessário acessar o script testes/log-webhook.php, passando o id do log na url como query parâmetro log_id correspondente ao registro da tabela logs_webhook do banco de dados, exemplo: http://localhost/paypal/testes/log-webhook.php?log_id=18
 
 ![log_webhook](https://github.com/rodriguesrenato61/paypal-integracao-php/blob/main/prints/log_webhook.png)
 
