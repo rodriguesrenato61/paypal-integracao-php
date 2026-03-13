@@ -39,7 +39,6 @@
                 </div>
 
                 <div class="credit-box">
-                    <!--<i class="bx bx-coins"></i>-->
                     <div class="credit-img">
                         <img src="img/coins.svg" />
                     </div>
@@ -62,11 +61,6 @@
                         <i class="bx bxl-youtube"></i>
                     </a>
                 </div>
-
-                <!--<div class="buttons">
-                    <button class="button">Subscribe</button>
-                    <button class="button">Message</button>
-                </div>-->
 
                 <div class="analytics">
                     <div class="data">
