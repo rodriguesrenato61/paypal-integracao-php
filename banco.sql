@@ -66,7 +66,7 @@ CREATE TABLE paypal_compras(
 );
 
 ALTER TABLE paypal_compras ADD CONSTRAINT FK_PAYPAL_COMPRA_USUARIO FOREIGN KEY(usuario_id) REFERENCES usuarios(id);
-ALTER TABLE paypal_compras ADD CONSTRAINT FK_PAYPAL_COMPRA_ITEM FOREIGN KEY(item_id) REFERENCES itens(id);
+ALTER TABLE paypal_compras ADD CONSTRAINT FK_PAYPAL_COMPRA_PACOTE FOREIGN KEY(pacote_id) REFERENCES pacotes(id);
 
 CREATE VIEW vw_paypal_compras AS SELECT pc.id, pc.tipo, pc.usuario_id, u.username, u.nome AS usuario_nome, pc.pacote_id, pc.descricao, pc.creditos, pc.currency_code, pc.valor, pc.valor_pago, pc.payment_status, pc.invoice_id, pc.txn_id, pc.order_id, pc.ambiente, pc.codigo_referencia, pc.data_criacao, DATE_FORMAT(pc.data_criacao, '%d/%m/%Y %H:%i:%s') AS data_criacao_br, pc.data_atualizacao, DATE_FORMAT(pc.data_atualizacao, '%d/%m/%Y %H:%i:%s') AS data_atualizacao_br
 FROM paypal_compras pc
