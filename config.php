@@ -6,6 +6,7 @@
     const DB_USER = "root";
     const DB_PASSWORD = "";
     const LOGS_WEBHOOK_DIR = "C://laragon/www/paypal/resources/logs";
+    const REQUESTS_DIR = "C://laragon/www/paypal/testes/requests";
 
     const PAYPAL_TIPO = "order";//ipn ou order
     const PAYPAL_EMAIL_BUSINESS = "";

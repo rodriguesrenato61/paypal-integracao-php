@@ -2,7 +2,6 @@
 
     require_once("../vendor/autoload.php");
 
-    const REQUESTS_DIR = "C://laragon/www/paypal/testes/requests";
 
     function testeWebhook(){
 
