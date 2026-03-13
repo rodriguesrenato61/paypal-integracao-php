@@ -34,8 +34,7 @@
             try {
 
                 $request = [
-                    'get' => (isset($_GET)) ? $_GET : NULL,
-                    'post' => (isset($_POST)) ? $_POST : NULL
+                    'get' => (isset($_GET)) ? $_GET : NULL
                 ];
 
                 $service = new PaypalService;

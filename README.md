@@ -37,6 +37,7 @@ const DB_USER = "root";
 const DB_PASSWORD = "";
 const LOGS_WEBHOOK_DIR = "C://laragon/www/paypal/resources/logs";//diretório de logs do webhook deve ser um diretório inacessível pelo navegador
 const REQUESTS_DIR = "C://laragon/www/paypal/testes/requests";//diretório de notificações POST enviadas para o webhook do Paypal IPN, utilizado para testar este webhook, deve ser um diretório inacessível pelo navegador
+
 const PAYPAL_TIPO = "order";//ipn ou order (tipo de integração a ser testada)
 const PAYPAL_EMAIL_BUSINESS = "";
 const PAYPAL_CLIENT_ID_SANDBOX = "";

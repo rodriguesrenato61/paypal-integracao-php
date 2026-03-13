@@ -95,9 +95,9 @@
                 if(empty($form['payment_status'])){
                     $errors[] = "payment_status não identificado";
                 }
-                /*if(empty($form['custom'])){
+                if(empty($form['custom'])){
                     $errors[] = "custom não identificado";
-                }*/
+                }
                 if(empty($form['business'])){
                     $errors[] = "business não identificado";
                 }
@@ -135,11 +135,6 @@
                     ];
                 }
 
-                $form['custom'] = "177317552448744";
-                $form['business'] = PAYPAL_EMAIL_BUSINESS;
-                $form['receiver_email'] = PAYPAL_EMAIL_BUSINESS;
-                $form['mc_gross'] = 8.00;
-
                 if($form['business'] != PAYPAL_EMAIL_BUSINESS || $form['receiver_email'] != PAYPAL_EMAIL_BUSINESS){
                     $logDados['msg'] = "Business email ou receiver email não corresponde ao proprietário do email Paypal";
                     return [
@@ -160,13 +155,13 @@
 
                 $logDados['paypal_compra'] = $paypalCompra->toArray();
 
-                /*if($paypalCompra->getAmbiente() != PAYPAL_AMBIENTE){
+                if($paypalCompra->getAmbiente() != PAYPAL_AMBIENTE){
                     $logDados['msg'] = "Paypal compra ambiente ".$paypalCompra->getAmbiente()." não condiz com o ambiente configurado ".PAYPAL_AMBIENTE;
                     return [
                         'success' => false,
                         'msg' => $logDados['msg']
                     ];
-                }*/
+                }
                 
                 if($form['payment_status'] != $paypalCompra->getPaymentStatus()){
                     
@@ -412,14 +407,8 @@
                                 ],
                                 'quantity' => "1",
                                 'category' => "DIGITAL_GOODS",
-                                'sku' => $paypalCompra->getPacoteId(),
-                                //'image_url' => "https://example.com/static/images/items/1/tshirt_green.jpg",
-                                //'url' => "https://example.com/url-to-the-item-being-purchased-1",
-                                /*'upc' => [
-                                    'type' => "UPC-A",
-                                    'code' => "123456789012"
-                                ]*/
-                            ],
+                                'sku' => $paypalCompra->getPacoteId()
+                            ]
                         ]
                     ]
                 ]
