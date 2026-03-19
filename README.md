@@ -6,6 +6,9 @@ Esta aplicação foi desenvolvida utilizando o PHP como backend, banco de dados 
 Esta aplicação contém scripts para utilização das seguintes APIs no momento: Paypal IPN e Paypal Orders. Consiste em um sistema de compra de créditos para demonstração do funcionamento da integração.
 Para qualquer dúvida ou contratar para novos trabalhos mandar email para rrodrigues.dev01@gmail.com.
 
+### Vídeo tutorial
+https://www.youtube.com/watch?v=xXcJ99t-pi8
+
 ### Paypal IPN requisitos
 Para testar a API do Paypal IPN é necessário ter o business email correspondente da sua conta sandbox ou de produção e o certificado no formato .pem fornecido pelo Paypal.
 
